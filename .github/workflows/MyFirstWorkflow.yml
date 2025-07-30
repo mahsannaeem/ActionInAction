@@ -25,6 +25,7 @@ jobs:
     steps:
       - run: echo "Hello from job 1"
   ThirdJob:
+    needs: [MyFirstJob]
     runs-on: ubuntu-latest
     steps:
       - run: echo "hello from job 2"
