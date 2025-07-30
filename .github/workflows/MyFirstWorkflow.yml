@@ -19,4 +19,13 @@ jobs:
         run: |
               echo "The files in repo are"
               tree
+  SeconJob:
+    needs: [MyFirstJob]
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Hello from job 1"
+  ThirdJob:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "hello from job 2"
               
